@@ -16,11 +16,18 @@ export class RestProvider {
   constructor(public http: HttpClient) {
     console.log('Hello RestProvider Provider');
   }
-  public getGroups() : Observable<Group[]>  {
+  /*public getGroups() : Observable<Group[]>  {
     return this.http
       .get('http://localhost:3000/groups')
       .pipe(        
         map (ans => Object.keys(ans).map(k=> new Group(ans[k])))
+      )
+  }*/
+  public getImagens() : Observable<Imagen[]>  {
+    return this.http
+      .get('http://localhost:3000/imagens')
+      .pipe(        
+        map (ans => Object.keys(ans).map(k=> new Imagen(ans[k])))
       )
   }
 
@@ -34,11 +41,11 @@ export class RestProvider {
 
 }
 
-export class Group {
+export class Imagen {
   id: number;
-  name: string;
-  fragment: string;
-  image: string;
+  nombre: string;
+  url: string;
+  pie: string;
   constructor(values: Object = {}) {
        Object.assign(this, values);
   } 

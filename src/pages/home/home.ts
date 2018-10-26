@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, LoadingController  } from 'ionic-angular';
-import { RestProvider, Group, Contenido  } from '../../providers/rest/rest';
+import { RestProvider, Imagen, Contenido  } from '../../providers/rest/rest';
 
 import { ListPage } from '../list/list';
 
@@ -12,7 +12,7 @@ import { ListPage } from '../list/list';
 
 
 export class HomePage {
-  private groups : Group[];
+  private imagens : Imagen[];
   private contenidos : Contenido[];
     
   constructor(
@@ -20,24 +20,24 @@ export class HomePage {
     public loadingCtrl:LoadingController,
     public restProvider:RestProvider
     ) {
-      this.getGroups();
+      this.getImagens();
       this.getContenidos();
       
   }
   
 
-  getGroups() {
+  getImagens() {
     const loader = this.loadingCtrl.create({
       spinner: 'bubbles'      
     })
     loader.present();
     this.restProvider
-      .getGroups()
+      .getImagens()
       .subscribe(
-        (groups : Group[]) => {
-          this.groups = groups;
+        (imagens : Imagen[]) => {
+          this.imagens = imagens;
           loader.dismiss();
-          console.warn("groups >> ", this.groups);
+          console.warn("imagens >> ", this.imagens);
         },
         (err) => {
           loader.dismiss();

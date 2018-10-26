@@ -1,10 +1,16 @@
 {
     "contenidos": [
         {
-        "id": 1,
-        "titulo": "Queen",
-        "texto": "Queen es una banda británica de rock formada en 1970 en Londres por el cantante Freddie Mercury, el guitarrista Brian May, el baterista Roger Taylor y el bajista John Deacon.",
-        "qr_id": 1
+            "titulo":"Historia",
+            "texto":"Sumapaz Páramo fue considerado un lugar sagrado para los indígenas muisca . Estaba asociado con las fuerzas divinas de la creación y el origen de la humanidad , un dominio donde los humanos no debían entrar. Durante el siglo XVI, el aventurero y conquistador alemán Nikolaus Federmann realizó una expedición cruzando el Sumapaz, en busca del tesoro mítico de El Dorado , con grandes bajas. El lugar fue nombrado por los españoles País de la Niebla (País de niebla) debido a las densas nubes a nivel del suelo, con una gran disminución de la visibilidad. En 1783, José Celestino Mutis dirigió la Expedición Botánica, con el propósito de estudiar la flora y fauna de la región. Sin embargo, el páramo no fue visitado debido a sus duras condiciones climáticas. El naturalista alemán Alexander von Humboldt hizo la primera descripción del páramo y las plantas locales en 1799. También describió la presencia de valles glaciares y asoció las características geológicas de la región, comparándolas con las que se ven en la geomorfología de la región. Alpes . A principios del siglo XX, el naturalista español José Cuatrecasas realizó una importante investigación del páramo y la línea de árboles . Otros científicos que describieron y estudiaron Sumapaz páramo fueron Ernesto Guhl, quien realizó una investigación a largo plazo de 3 décadas sobre las comunidades vegetales, y Thomas van der Hammen .",
+            "qr_id":1
+        }
+    ],
+    "imagens": [
+        {            
+            "nombre":"Laguna Chisacá",
+            "url":"https://upload.wikimedia.org/wikipedia/commons/1/1b/Laguna_Chisac%C3%A1_-_PNN_Sumapaz.jpg",
+            "pie":"Páramo de Sumapaz es el ecosistema de páramo más grande del mundo"
         }
     ]
     

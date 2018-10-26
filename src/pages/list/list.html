@@ -9,7 +9,7 @@
       <button menuToggle *ngIf="!selectedItem">
         <ion-icon name="menu"></ion-icon>
       </button>
-      <ion-title *ngIf="selectedItem"> {{selectedItem.name}}</ion-title>
+      <ion-title *ngIf="selectedItem"> {{selectedItem.nombre}}</ion-title>
     </ion-navbar>
   </ion-header>
 
@@ -19,10 +19,10 @@
                 
       <ion-card-content>               
       
-      <img src="{{selectedItem.image}}">  
+      <img src="{{selectedItem.url}}">  
       <p>
             <br/>
-          {{selectedItem.fragment}}
+          {{selectedItem.pie}}
       </p>
       </ion-card-content>
      

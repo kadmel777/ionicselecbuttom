@@ -16,18 +16,18 @@
   </ion-navbar>
 </ion-header>
 <ion-content>        
-  <ion-card *ngFor="let g of contenidos"> <!--conecta la base de datos-->              
+  <ion-card > <!--conecta la base de datos-->              
                 
       <ion-card-content>               
-      <ion-card-title>
-          {{g.titulo}}
+      <ion-card-title *ngFor="let i of contenidos">
+          {{i.titulo}}
       </ion-card-title>
-      <!----<button ion-item (click)="itemTapped($event, g)">
-        <img src="{{g.image}}">  
-      </button>-->
-      <p>
+      <button *ngFor="let g of imagens"  ion-item (click)="itemTapped($event, g)">
+        <img src="{{g.url}}">  
+      </button>
+      <p *ngFor="let i of contenidos">
             <br/>
-          {{g.texto}}
+          {{i.texto}}
       </p>
       </ion-card-content>
      
