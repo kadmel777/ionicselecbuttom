@@ -24,6 +24,14 @@ export class RestProvider {
       )
   }
 
+  public getContenidos() : Observable<Contenido[]>  {
+    return this.http
+      .get('http://localhost:3000/contenidos')
+      .pipe(        
+        map (ans => Object.keys(ans).map(k=> new Contenido(ans[k])))
+      )
+  }
+
 }
 
 export class Group {
@@ -33,7 +41,16 @@ export class Group {
   image: string;
   constructor(values: Object = {}) {
        Object.assign(this, values);
-  }
+  } 
   
 }
 
+export class Contenido {
+  id: number;
+  titulo: string;
+  texto: string;
+  qr_id: number;
+  constructor(values: Object = {}) {
+       Object.assign(this, values);
+  }
+}

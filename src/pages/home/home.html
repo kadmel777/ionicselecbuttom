@@ -3,7 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Groups</ion-title>
+    <ion-title>SuParadas</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -16,18 +16,18 @@
   </ion-navbar>
 </ion-header>
 <ion-content>        
-  <ion-card *ngFor="let g of groups"> <!--conecta la base de datos-->              
+  <ion-card *ngFor="let g of contenidos"> <!--conecta la base de datos-->              
                 
       <ion-card-content>               
       <ion-card-title>
-          {{g.name}}
+          {{g.titulo}}
       </ion-card-title>
-      <button ion-item (click)="itemTapped($event, g)">
+      <!----<button ion-item (click)="itemTapped($event, g)">
         <img src="{{g.image}}">  
-      </button>
+      </button>-->
       <p>
             <br/>
-          {{g.fragment}}
+          {{g.texto}}
       </p>
       </ion-card-content>
      

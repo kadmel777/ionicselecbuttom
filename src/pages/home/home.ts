@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, LoadingController  } from 'ionic-angular';
-import { RestProvider, Group  } from '../../providers/rest/rest';
+import { RestProvider, Group, Contenido  } from '../../providers/rest/rest';
 
 import { ListPage } from '../list/list';
 
@@ -13,6 +13,7 @@ import { ListPage } from '../list/list';
 
 export class HomePage {
   private groups : Group[];
+  private contenidos : Contenido[];
     
   constructor(
     public navCtrl: NavController,
@@ -20,6 +21,7 @@ export class HomePage {
     public restProvider:RestProvider
     ) {
       this.getGroups();
+      this.getContenidos();
       
   }
   
@@ -43,6 +45,28 @@ export class HomePage {
         }
       )
   }
+
+
+  getContenidos() {
+    const loader = this.loadingCtrl.create({
+      spinner: 'bubbles'      
+    })
+    loader.present();
+    this.restProvider
+      .getContenidos()
+      .subscribe(
+        (contenidos : Contenido[]) => {
+          this.contenidos = contenidos;
+          loader.dismiss();
+          console.warn("contenidos >> ", this.contenidos);
+        },
+        (err) => {
+          loader.dismiss();
+          console.error(err);
+        }
+      )
+  }
+
   itemTapped(event, item) {
     this.navCtrl.push(ListPage, {
       g: item
