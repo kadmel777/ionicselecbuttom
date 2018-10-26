@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NavController, LoadingController  } from 'ionic-angular';
 import { RestProvider, Group  } from '../../providers/rest/rest';
 
+import { ListPage } from '../list/list';
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -40,6 +42,11 @@ export class HomePage {
           console.error(err);
         }
       )
+  }
+  itemTapped(event, item) {
+    this.navCtrl.push(ListPage, {
+      g: item
+    });
   }
 
 }

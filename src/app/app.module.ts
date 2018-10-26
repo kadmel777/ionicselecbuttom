@@ -10,10 +10,13 @@ import { HomePage } from '../pages/home/home';
 import { HttpClientModule } from '@angular/common/http';
 import { RestProvider } from '../providers/rest/rest';
 
+import {ListPage} from '../pages/list/list';
+
 @NgModule({
 declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    ListPage
 ],
 imports: [
     BrowserModule,
@@ -23,7 +26,8 @@ imports: [
 bootstrap: [IonicApp],
 entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    ListPage
 ],
 providers: [
     StatusBar,
